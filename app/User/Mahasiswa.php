@@ -17,4 +17,9 @@ class Mahasiswa extends Model
     {
         return $this->belongsTo('App\Akademik\Jurusan', 'id_jurusan');
     }
+
+    public function Akun()
+    {
+        return $this->belongsTo('App\User\Akun', 'id_akun');
+    }
 }

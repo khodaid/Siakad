@@ -11,4 +11,9 @@ class Akun extends Model
     protected $primaryKey = 'id_akun';
     protected $guard = [];
 
+    public function Mahasiswa()
+    {
+        return $this->hasOne('App\User\Mahasiswa', 'nim');
+    }
+
 }
