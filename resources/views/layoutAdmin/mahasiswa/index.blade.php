@@ -11,20 +11,20 @@
                         <br>
                     </div>
                         <div class="col-6">
-                            
+
                         <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#exampleModal">
                                 Tambah Data
                             </button>
-                            
+
                         </div>
                         <div class="col-6">
                             <div class="form-group pull-left">
                                 <input id="searchInput" type="text" class="search form-control" placeholder="Cari mahasiswa">
                             </div>
                         </div>
-                    
-                        
+
+
                     <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -41,8 +41,8 @@
                                             <div class="form-group">
                                             <label for="inputNPM">NPM</label>
                                             <input name="npm" type="tel"
-                                            class="form-control" 
-                                            id="inputNPM" 
+                                            class="form-control"
+                                            id="inputNPM"
                                             formnovalidate="formnovalidate">
                                             </div>
                                             <div class="form-group">
@@ -86,24 +86,30 @@
                                                 <input name="tgl_lahir" type="date" class="form-control" id="inputNama" aria-describedby="emailHelp">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputNama">Agama</label>
-                                                <input name="agama" type="text" class="form-control" id="inputNama" aria-describedby="emailHelp">
+                                                <label for="exampleFormControlSelect1">Agama</label>
+                                                <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
+                                                <option value="Islam">Islam</option>
+                                                <option value="Kristen">Kristen</option>
+                                                <option value="Katolik">Katolik</option>
+                                                <option value="Hindu">Hindu</option>
+                                                <option value="Buddha">Buddha</option>
+                                                </select>
                                             </div>
-                                        
+
                                     </div>
                                     <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>
                                     </div>
-                                
+
                                     </div>
                                 </div>
                             </div>
                 </div>
-            
 
-            
+
+
             <table class="table table-striped">
                 <thead class="thead-light">
                     <tr>
@@ -135,11 +141,11 @@
                         <td>{{$mahasiswa->agama}}</td>
                         <td><a href="/admin/mahasiswa/{{$mahasiswa->npm}}/edit" class="btn-warning btn-sm">Edit</td>
                         <td><a href="{{route('mahasiswa.delete', $mahasiswa)}}" class="btn-danger btn-sm" onclick="return confirm('Data akan dihapus, lanjutkan?')">Delete</a></td>
-        
-                    </tr>  
+
+                    </tr>
                 @endforeach
                 </tbody>
-               
+
             </table>
         </div>
     </div>
