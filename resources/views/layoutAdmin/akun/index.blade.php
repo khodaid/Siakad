@@ -11,20 +11,20 @@
                     <br>
                 </div>
                     <div class="col-6">
-                        
+
                     <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#exampleModal">
                             Tambah Data
                         </button>
-                        
+
                     </div>
                     <div class="col-6">
                         <div class="form-group pull-left">
                             <input id="searchInput" type="text" class="search form-control" placeholder="Cari Akun">
                         </div>
                     </div>
-                
-                    
+
+
                 <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -57,27 +57,27 @@
                                             <option value="Mahasiswa">Mahasiswa</option>
                                             </select>
                                         </div>
-                                    
+
                                 </div>
                                 <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                                 </div>
-                            
+
                                 </div>
                             </div>
                         </div>
             </div>
-        
 
-        
+
+
         <table class="table table-striped">
             <thead class="thead-light">
                 <tr>
                     <th>ID Akun</th>
                     <th>Identitas</th>
-                    <th>Password</th>
+                    {{-- <th>Password</th> --}}
                     <th>Categori</th>
                     <th colspan="2" style="text-align: center">Aksi</th>
                 </tr>
@@ -87,15 +87,15 @@
                 <tr>
                     <td>{{$akun->id_akun}}</td>
                     <td>{{$akun->identitas}}</td>
-                    <td>{{$akun->password}}</td>
+                    {{-- <td>{{$akun->password}}</td> --}}
                     <td>{{$akun->categori}}</td>
                     <td><a href="{{route('akun.edit', $akun)}}" class="btn-warning btn-sm">Edit</td>
                     <td><a href="{{route('akun.delete', $akun)}}" class="btn-danger btn-sm" onclick="return confirm('Data akan dihapus, lanjutkan?')">Delete</a></td>
-    
-                </tr>  
+
+                </tr>
             @endforeach
             </tbody>
-            
+
         </table>
     </div>
 </div>
