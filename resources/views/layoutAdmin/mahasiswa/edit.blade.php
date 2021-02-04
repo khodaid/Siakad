@@ -11,7 +11,7 @@
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="inputNPM">NPM</label>
-                <input name="npm" type="number" class="form-control" id="inputNPM" aria-describedby="emailHelp" value="{{$mahasiswas->npm}}">
+                <input name="npm" type="text" class="form-control" id="inputNPM" aria-describedby="emailHelp" value="{{$mahasiswas->npm}}">
               </div>
               <div class="form-group">
                   <label for="inputJurusan">ID Jurusan</label>
@@ -57,10 +57,10 @@
                   <label for="inputNama">Agama</label>
                   <input name="agama" type="text" class="form-control" id="inputNama" aria-describedby="emailHelp" value="{{$mahasiswas->agama}}">
               </div>
-            
+
           </div>
               <div class="modal-footer">
                   <button type="submit" class="btn btn-warning">Update</button>
           </form>
-@endsection        
+@endsection
 </x-admin-master>
