@@ -11,20 +11,20 @@
                 <br>
             </div>
                 <div class="col-6">
-                    
+
                 <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#exampleModal">
                         Tambah Data
                     </button>
-                    
+
                 </div>
                 <div class="col-6">
                     <div class="form-group pull-left">
                         <input id="searchInput" type="text" class="search form-control" placeholder="Cari Dosen">
                     </div>
                 </div>
-            
-                
+
+
             <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -71,14 +71,14 @@
                             <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                             </div>
-                        
+
                             </div>
                         </div>
                     </div>
         </div>
 
 
-
+        <div class="table-responsive-sm">
         <table class="table table-striped">
         <thead class="thead-light">
             <tr>
@@ -103,11 +103,12 @@
                 <td><a href="{{route('dosen.edit', $dosen->nim)}}" class="btn-warning btn-sm">Edit</td>
                 <td><a href="{{route('dosen.delete', $dosen)}}" class="btn-danger btn-sm" onclick="return confirm('Data akan dihapus, lanjutkan?')">Delete</a></td>
 
-            </tr>  
+            </tr>
         @endforeach
         </tbody>
 
         </table>
+        </div>
     @endsection
         @section('scripts')
             <script src="{{asset('vendor/datatables/jquery.dataTables.min.js')}}"></script>
