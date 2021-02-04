@@ -148,6 +148,7 @@
 
             </table>
             </div>
+            {{$mahasiswas->links()}}
         </div>
     </div>
     @endsection
