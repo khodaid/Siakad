@@ -109,6 +109,7 @@
 
         </table>
         </div>
+        {{$dosens->links()}}
     @endsection
         @section('scripts')
             <script src="{{asset('vendor/datatables/jquery.dataTables.min.js')}}"></script>

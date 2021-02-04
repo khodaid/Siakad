@@ -109,7 +109,7 @@
                 </div>
 
 
-
+            <div class="table-responsive-sm">
             <table class="table table-striped">
                 <thead class="thead-light">
                     <tr>
@@ -147,6 +147,7 @@
                 </tbody>
 
             </table>
+            </div>
         </div>
     </div>
     @endsection
