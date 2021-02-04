@@ -9,7 +9,7 @@ class Dosen extends Model
 {
     protected $guarded = [];
     protected $fillabel = ['nim','nama','alamat','jenis_kelamin','email','no_telp'];
-    protected $cats = ['string' => 'nim'];
+    protected $casts = ['nim' => 'string'];
     public function user(){
         return $this->belongsTo(User::class);
     }
