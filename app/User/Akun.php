@@ -13,7 +13,7 @@ class Akun extends Model
 
     public function Mahasiswa()
     {
-        return $this->hasOne('App\User\Mahasiswa', 'nim');
+        return $this->hasOne('App\User\Mahasiswa', 'npm');
     }
 
 }
