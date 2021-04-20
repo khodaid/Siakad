@@ -117,4 +117,29 @@ class FakultasController extends Controller
         return redirect()->back()->with('warning','Data Terhapus');
 
     }
+
+    public function indexApi()
+    {
+        $fakultas = Fakultas::paginate(5);
+
+        return $fakultas;
+    }
+
+    public function storeApi(Request $request)
+    {
+        $request->validate([
+            'id_fakultas' => 'required|min:1',
+            'nama_fakultas' => 'required|min:6'
+        ]);
+
+        $fakul = new Fakultas();
+
+        $fakul->id_fakultas = $request->id_fakultas;
+        $fakul->nama_fakultas = $request->nama_fakultas;
+
+        $fakul->save();
+
+        return "sukses";
+
+    }
 }
